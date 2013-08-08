@@ -3,16 +3,15 @@
 <head>
 <meta charset=utf-8"/>
     <title>Bitstarter UP</title>
-<<<<<<< HEAD
     <meta name="viewport" content="width-device-width, inicial-scale=1.0" />
-=======
->>>>>>> a10e7f71858969fa29eb3c92ead799a1773758cf
     <link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css" />
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
     <link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" />
     <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" />
     <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" />
     <link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css" />
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <style type="text/css">
         /* Large Desktop */
         @media (min-width:980px) 
@@ -68,32 +67,42 @@
         .order 
         { padding: 2% 0%;
         }
-        .action 
+        .actions 
         { background-color: #343434;
           padding: 3% 0%;
         }
-        .container 
-        { width: 960px;
-        }
-        .navigation, .section1, .section2, .faq, .footer 
-        { padding: 10px 0px 10px 0px;
-        }
-        .video, .thermometer, .order, .social 
+        .video, .thermometer, .order, .social, .statistics
         { border: 1px dotted;
           text-align: center;
         }
-        .video 
-        { /* Bordes Internos tienen 1px width, necesita agregar 4 x 1px to 120px */
-          height: 124px;
-          line-height: 124px;
+        .statistics h3, .statistics p 
+        { color: white;
         }
-        .thermometer, .order, .social 
-        { /* line-height to vertically center: http//phroz.net/css/vertical-align/index.html */
-          height: 40px;
-          line-height: 40px;
+        /* Marketing Copy and Footer */
+        .copy 
+        { padding-top: 2.5%;
+          padding-bottom: 2.5%;
+          text-align: justify;
+        }
+        .asset 
+        { padding: 2.5% 0%;
+        }
+        /* Footer */
+        .footer 
+        { color: #cccccc;
+          text-align: center;
+        }
+        .footer p 
+        { font-size: 11px;
+        }
+        .footer a 
+        { color: #ccccff;
         }
         div.row 
         { border: 1px solid;
+        }
+        .container 
+        { width: 960px;
         }
     </style>
 </head>
@@ -175,30 +184,75 @@
                 <!-- Bootstrap Buttons Standard -->
                 <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
                 <div class="span6 offset3 order">
-                    <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+                    <button class="btn btn-success btn-large">Preorden</button>
+                </div>
+                <!-- Se incluyen botones de acceso a redes sociales -->
+                <div class="span8 offset2 social">
+                    <button class="btn btn-twitter"><i class="icon-twitter"></i>  | Twitter </button>
                     <button class="btn btn-facebook"><i class="icon-facebook"></i> | facebook</button>
                 </div>
             </div>
         </div>
-        <div class="row section1">
-            <div class="span12">
-                Marketing Seccion 1
+        <!-- http://twitter.github.oi/bootstrap/base-css.html#images -->
+        <!-- http://placehold.it -->
+        <div class="row-fluid section1">
+            <div class="span5 offset1 asset">
+                <img class="img-polaroid" src="http://placehold.it/480x300" />
+            </div>
+            <div class="span5 copy">
+                <p>
+                    Hoy en dia las empresas necesitan desarrollar al maximo su potencialidad, ofreciendo el mejor servicio a sus clientes. La tecnologia es una 
+                    herramienta fundamental para llevar adelante los desafios que los mercados exigen a todas las empresas. Para enfrentar de mejor manera los
+                    desafios que tiene a diario su empresa, hagase asesorar por los mejores. Hagalo con Inteligencia!! Hagalo con Adimen.!!
+                </p>
             </div>
         </div>
-        <div class="row section2">
-            <div class="span12">
-                Marketing Seccion 2
+        <div class="row-fluid section2">
+            <div class="span5 offset1 copy copy-rigth">
+                <p>Adimen es una empresa especialista en tecnologias de la Informacion y esta a la vanguardia para ofrecer los mejores servicios que necesita
+                    su empresa para poder desempeñar de mejor manera su labor. Desarrollamos WebApp con tecnologia de punta y con los mas altos standares de 
+                    calidad. Cuando tenga que escoger un socio tecnologia, Hagalo con Inteligencia!! Hagalo con Adimen!!!
+                </p>
+            </div>
+            <div class="span5 asset">
+                <img class="img-polaroid" src="http://placehold.it/480x300" />
             </div>
         </div>
-        <div class="row faq">
-            <div class="span12">
-                FAQ
+        <!-- Se agrega funcionalidad js para manejar el acordion -->
+        <!-- Se utilizan las dependencias de jquery.js y bootstrap.js -->
+        <!-- http://twitter.github.oi/bootstrap/javascript.html#collapse -->
+        <div class="row.fluid faq">
+            <div class="span10 offset1">
+                <h3>FAQ</h3>
+                <div class="accordion" id="accordion2">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">Que Necesitas Saber? Preguntas Frecuentes</a>
+                        </div>
+                        <div class="accordion-body collapse" id="collapseOne">
+                            <div class="accordion-inner">
+                                Preguntas Frecuentes
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Quien es el que mas Pregunta?</a>
+                        </div>
+                        <div class="accordion-body collapse" id="collapseTwo">
+                            <div class="accordion-inner">
+                                La pregunta mas frecuente de los usuarios es??
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button type="button" class="btn btn-ttc">Grabar Cambios</button>
         </div>
-        <div class="row footer">
+        <!-- No es lo primordial péro hay que colocar el copyrigth -->
+        <!-- http://creativecommons.org/licences/ -->
+        <div class="row-fluid footer">
             <div class="span12">
-                Footer
+                <p>&copy; Desarrollo por ADIMEN SpA. <a href="http://creativecommons.org/licences/by-sa/3.0/">CC Sa</a> Santiago - Chile</p>
             </div>
         </div>
     </div>
