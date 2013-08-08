@@ -1,21 +1,78 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset=utf-8"/>
-    <title>My First Bitstarter</title>
+    <title>Bitstarter UP</title>
+    <meta name="viewport" content="width-device-width, inicial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" />
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" />
+    <link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css" />
     <style type="text/css">
+        /* Large Desktop */
+        @media (min-width:980px) 
+        {
+            body 
+            { padding-top: 60px;
+            }
+            .linediv-l 
+            { border-right: 1px white solid;
+            }
+            .linediv-r 
+            { border-left: 1px white solid;
+            }
+        }
+        /* Landscope phones and down */
+        @media (max-width:480px) 
+        {
+            .copy 
+            { padding: 2.5% 10%;
+            }
+            .linediv-l 
+            { border-bottom: 1px white solid;
+            }
+            .linediv-r 
+            { border-top: 1px white solid;
+            }
+        }
+        /* Estilo Base */
+        /* Cabecera y cuerpo Principal */
         body 
-        { padding-top: 20px;
+        { font-family: 'Open-Sans', Helvetica, Arial, sans-serif;
+          padding-top: 20px;
           padding-bottom: 40px;
+        }
+        .heading, .subheading 
+        { font-family: 'Ubuntu', helvetica, Arial, sans-serif;
+          text-align: center;
+          margin-top: 7.5px;
+        }
+        p.lead 
+        { padding-top: 1.5%;
+          font-size: 24px;
+          line-height: 30px;
+        }
+        p 
+        { font-size: 18px;
+          line-height: 24px;
+        }
+        /* Video Pitch and Action */
+        .pitch 
+        { padding: 2.5% 0%;
+        }
+        .order 
+        { padding: 2% 0%;
+        }
+        .action 
+        { background-color: #343434;
+          padding: 3% 0%;
         }
         .container 
         { width: 960px;
         }
-        p.lead 
-        { padding-top: 15px;
-        }
-        .navigation, .pitch, .section1, .section2, .faq, .footer 
+        .navigation, .section1, .section2, .faq, .footer 
         { padding: 10px 0px 10px 0px;
         }
         .video, .thermometer, .order, .social 
@@ -38,41 +95,85 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row navigation">
-            <div class="span2 logo">
-                Logo
-            </div>
-            <div class="span6 blank">
-                Blank
-            </div>
-            <div class="span4 about">
-                About
+    <!-- Mobile-frendly navbar adapted from example -->
+    <!-- http://twitter.github.io/boostrap/examples/starter-template.html -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">Bitstarter</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerca de...</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div> 
             </div>
         </div>
-        <div class="row heading">
+    </div>
+    <div class="container">
+        <!-- Fuentes de origen Google -->
+        <!-- www.google.com/fonts/specimen/Ubuntu -->
+        <!-- www.google.com/fonts/specimen/Ubuntu#pairing -->
+        <div class="row-fluid heading">
             <div class="span12">
                 <h1>Adimen Labs</h1>
             </div>
         </div>
-        <div class="row subheading">
+        <div class="row-fluid subheading">
             <div class="span12">
+                <!-- Fuente especial para el paragrafo 'lead' extraida desde Bootstrap -->
+                <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
                 <p class="lead">Este es mi primer proyecto Bitstarter.</p>
             </div>
         </div>
-        <div class="row pitch">
-            <div class="span6 video">
-                Video
+        <div class="row-fluid pitch">
+            <div class="span5 offset1 video">
+                <img class="img-polaroid" src="http://placehold.it/480x300" alt="Video" /> 
             </div>
-            <div class="span6">
-                <div class="thermometer">
-                    Termometro
+            <!-- Se agrega una nueva seccion div para agregar estadisticas, ordenes y boton de compartir -->
+            <div class="span5 actions">
+                <div class="span8 offset2">
+                    <div class="statistics">
+                        <!-- Se agregan lineas que se ven distinto en forma horizontal y vertical, ilustrando la funcionalidad media queries. -->
+                        <div class="span4">
+                            <div class="lineadiv-l">
+                                <h3>1000</h3>
+                                <p>Brackets</p>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="lineadiv-c">
+                                <h3>$1.000.-</h3>
+                                <p>$100.000.-</p>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="linediv-r">
+                                <h3>10</h3>
+                                <p>dias libres</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="order">
-                    Orden
+                <!-- Bootstrap progress bar -->
+                <!-- http://twitter.github.io/bootstrap/components.html#progress -->
+                <div class="span10 offset1">
+                    <div class="thermomiter progress active">
+                        <div class="bar bar-success" style="width: 60%;"></div>
+                        <div class="bar bar-warning" style="width: 40%;"></div>
+                    </div>
                 </div>
-                <div class="social">
-                    Social
+                <!-- Bootstrap Buttons Standard -->
+                <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+                <div class="span6 offset3 order">
+                    <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+                    <button class="btn btn-facebook"><i class="icon-facebook"></i> | facebook</button>
                 </div>
             </div>
         </div>
@@ -86,10 +187,11 @@
                 Marketing Seccion 2
             </div>
         </div>
-                <div class="row faq">
+        <div class="row faq">
             <div class="span12">
                 FAQ
             </div>
+            <button type="button" class="btn btn-ttc">Grabar Cambios</button>
         </div>
         <div class="row footer">
             <div class="span12">
