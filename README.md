@@ -1,7 +1,3 @@
-bitstarter
-==========
+Adimen Labs
 
-Tarea HW3
-
-Aplicacion Inicial de mi propia StartUp Chile
-
+Se agrega bitcoin e interaccion con redes sociales
